@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/pinkstar.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThePinkForm</title>
+  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+</head>
+<body class="bg-white dark:bg-pink-200 text-black dark:text-pink-200 min-h-screen flex flex-col items-center justify-center">
+
+  <button id="toggle-dark" class="mb-6 px-4 py-2 bg-black text-pink-200 rounded">
+  Etheral Mode
+  </button>
+
+  <script>
+    const btn = document.getElementById('toggle-dark');
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  </script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
